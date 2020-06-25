@@ -1,0 +1,67 @@
+<!DOCYTPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=viewport-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="navbar" style="position: fixed; top: 0; width: 100vw; z-index: 9999;">
+        <div class="container">
+            <nav class="navbar container-fluid" style="padding-left: 0">
+                <div class="col-2" style="height: 40px!important; padding-right: 0; padding-left: 0" id="left-nav">
+                    <!-- Add your logo here -->
+                    <!-- <a href=""><img id="logo" src="styles/logo-white.png" style="max-height: 100%"></a> -->
+                </div>
+                <div class="col-8 top-navigation animate-trigger-navbar animate-horizontal-movement" style="padding-left: 0; padding-right: 0;" id="middle-nav">
+                    <ul style="float: right;">
+                        <li id="home-btn"><a href="#">HOME</a></li>
+                        <li><a href="filters" id="section1">SECTION 1</a></li>
+                        <li><a href="pricing" id="section2">SECTION 2</a></li>
+                        <li><a href="setup" id="section3">SECTION 3</a></li>
+                        <li><a href="contact" id="section4">SECTION 4</a></li>
+                        <li class="exception">
+                        </li>
+                    </ul>  
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-bars" id="hamburger-menu" style="float: right"></i>
+                    <div id="sidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" id="closebtn">&times;</a>
+                        <a href="home">Home</a>
+                        <a href="#">Section1</a>
+                        <a href="#">Section2</a>
+                        <a href="#">Section3</a>
+                        <a href="#">Section4</a>
+                    </div>
+                </div>
+            </nav>        
+        </div>
+        </div>
+        <div class="col-12 animate-trigger animate-background-image" id="jumbotron">
+            <div class="animate-trigger animate-horizontal-movement-1" id="first-slide">
+            </div>
+            <div class="animate-trigger animate-horizontal-movement-2" id="second-slide">
+                <div class="center-col-12">
+                    <div class="col-12" align="center">
+                        <img src="styles/caleblipan-favicon_32x32.svg" style="width: 40px">
+                    </div>
+                </div>
+            </div>
+            <div class="shade col-12">
+                <div class="col-7" id="top-text">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <button>Lorem Ipsum</button>
+                </div>
+                <div class="col-5">.</div>
+            </div>
+        </div>
+        
+        <!-- Add your contents here -->
+        <div id="main">
+        </div>
+        <script src="scripts/scripts.js" async></script>
+    </body>
+</html>

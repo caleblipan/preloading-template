@@ -1,0 +1,322 @@
+a {
+    text-decoration: none;
+}
+
+.animate-background-image.trigger {
+    animation: 0.1s changeBackground forwards;
+    animation-delay: 2.4s;
+}
+
+#middle-nav { opacity: 0 }
+
+.animate-horizontal-movement.trigger {
+    animation: 0.8s moveLeft forwards;
+}
+
+.animate-horizontal-movement-1.trigger {
+  animation: 1.2s moveRight forwards, 1.2s remove forwards;
+    animation-delay: 0.4s, 2.4s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    -webkit-animation-timing-function: ease-in-out, ease-in-out;
+}
+
+.animate-horizontal-movement-2.trigger {
+  animation: 1.2s moveRight forwards, 1.2s remove forwards;
+    animation-delay: 0.6s, 2.4s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    -webkit-animation-timing-function: ease-in-out, ease-in-out;
+}
+
+@keyframes changeBackground {
+    from { background: violet }
+    to {
+        background: url(home.jpg);
+        background-position: 50% 80%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@keyframes moveUp {
+    from {padding-top: 100vh; visibility: visible;}
+    to {padding-top: 20%; visibility: visible}
+}
+
+@keyframes overflow {
+    from { overflow: hidden }
+    to { overflow: visible }
+}
+
+@keyframes moveRight {
+    0% { transform: translate(-100%, 0)}
+    100% { transform: translate(0, 0) }
+}
+
+@keyframes moveLeft {
+    from { opacity: 0; transform: translate(15px, 0) }
+    to { opacity: 1; transform: translate(0, 0) }
+}
+
+@keyframes remove {
+    0% { transform: translate(0, 0)}
+    100% { transform: translate(100%, 0)}
+}
+
+#first-slide {
+    background-color: blueviolet;
+    height: 100%;
+    width: 100%;
+    transform: translate(-100%, 0);
+    position: fixed;
+    z-index: 1;
+}
+
+#second-slide {
+    background: darkviolet;
+    height: 100%;
+    width: 100%;
+    transform: translate(-100%, 0);
+    position: fixed;
+    z-index: 2;
+}
+
+#image-slide {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 3;
+}
+
+#top-image {
+    height: 90%;
+    background: url(home.jpg);
+    background-position: 60% 90%;
+    background-repeat: no-repeat;
+}
+
+#bottom-footer {
+    height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body { 
+    background: violet; 
+    margin: 0; 
+    overflow: hidden; 
+    animation: 1s overflow forwards; 
+    animation-delay: 4.4s;
+}
+
+h1 { font-family: 'Montserrat', sans-serif; color: white; font-size: 56px; margin-top: 8px}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 0px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="center-col-"]
+{
+    float: left;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-col-6 { width: 50% }
+.center-col-12 { width: 100% }
+
+.even-row, .odd-row, footer
+{
+    padding: 128px 12.5%;
+}
+
+.even-row
+{
+    background: #fefafa;
+}
+
+.even-row h2, .odd-row h2
+{
+    color: #990000;
+    font-weight: normal;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  transition: 0.3s;
+    padding: 16px 24px;
+}
+.navbar a {
+  color: white;
+}
+
+.top-navigation ul {
+  list-style-type: none;
+    position: relative;
+    margin: 8px;
+}
+.top-navigation li {
+  display: inline;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 22.13px;
+  margin: 0 16px;
+  color: #ffffff;
+  position: relative;
+}
+
+.top-navigation li a {
+  font-weight: bold;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+.top-navigation li a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid blueviolet;
+}
+
+#hamburger-menu {
+    color: white;
+    font-size: 42px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #1d1d1d;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: 0 0 10px;
+}
+
+.sidenav a {
+  font-family: "Montserrat", sans-serif;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* JUMBOTRON */
+
+#jumbotron {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.shade {
+    background: rgba(0,0,0, 0.65);
+    width: 100%;
+    height: 100%;
+    padding: 0 17.5% 0 17.5%;
+    animation: 2s moveUp forwards;
+    animation-delay: 2.4s;
+    visibility: hidden;
+}
+
+#top-text {
+    border-left: 1px solid white;
+    height: 100%;
+    padding: 0 32px;
+}
+
+#top-text h1, #top-text button {
+    opacity: 0;
+    animation: 0.8s moveLeft forwards;
+    animation-delay: 4.4s;
+}
+
+button {
+    background: white;
+    border: 0;
+    outline: none;
+    padding: 12px 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    padding: 12px 36px;
+    box-shadow: 0 0 20px blueviolet;
+}
+
+@media screen and (max-width: 900px) {
+    [class*="col-"] { width: 100% }
+    
+    .top-navigation {
+        display: none;
+    }
+    
+    #left-nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shade {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .navbar {
+        padding: 10px 12px;
+    }
+    
+    h1 {
+        font-size: 9vw;
+    }
+    
+    .shade {
+        padding-top: 40%!important;
+    }
+}
